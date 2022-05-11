@@ -9,9 +9,6 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 
 
-// DATABASE
-
-
 
 // MIDDLEWARE
 app.use(cors());
