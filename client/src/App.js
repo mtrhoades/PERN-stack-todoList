@@ -3,6 +3,7 @@ import './App.css';
 
 // COMPONENTS IMPORTS
 import InputTodo from './components/InputTodo';
+import ListTodos from './components/ListTodos';
 
 
 // FUNCTIONAL COMPONENT
@@ -15,6 +16,8 @@ export default function App() {
     <div className="container">
 
     <InputTodo />
+
+    <ListTodos />
 
     </div>
   );

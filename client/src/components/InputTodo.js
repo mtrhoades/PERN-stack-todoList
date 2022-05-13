@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 
 // FUNCTIONAL COMPONENT
 const InputTodo = () => {
+
     // vanilla js section
     const [description, setDescription] = useState('');
+
 
     // helper functions
     const onSubmitForm = async(e) => {
@@ -17,16 +19,19 @@ const InputTodo = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body),
             });
-            console.log(response);
+            // console.log(response);
+            window.location = '/';
+            
         } catch (err) {
             console.error(err.message)
         }
-    }
+    };
+
 
     // jsx section
   return (
       <div>
-    <h1 style={{textAlign: 'center', marginTop: '5rem'}}>PERN Todo List</h1>
+    <h1 style={{textAlign: 'center', marginTop: '5rem'}}>PERN Stack To-do List Application</h1>
     <form style={{display: 'flex', marginTop: '2.5rem'}} onSubmit={onSubmitForm}>
         <input 
             type='text'
